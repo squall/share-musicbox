@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Share MusicBox｜整張專輯一鍵分享，沒有網路也能聽</title>
-<meta name="description" content="Share MusicBox 是 iPhone / iPad 的家庭音樂盒：把常聽的 mp3 整理成專輯存在手機裡，沒有網路也能聽；用 AirDrop 一鍵把整張專輯連同曲序與封面分享給家人。">
+<title>Share MusicBox｜你自己的音樂，沒有網路也能聽</title>
+<meta name="description" content="Share MusicBox 是 iPhone / iPad 的個人音樂盒：把你自己擁有的 mp3 整理成專輯存在手機裡，沒有網路也能聽；整理好的專輯，也能用 AirDrop 傳到家人的 iPhone。">
 <meta name="theme-color" content="#070a1f">
 <meta property="og:title" content="Share MusicBox">
-<meta property="og:description" content="整張專輯一鍵分享給家人，沒有網路也能聽。">
+<meta property="og:description" content="你自己的音樂，沒有網路也能聽；整理好的專輯，也能傳給家人。">
 <meta property="og:image" content="assets/img/app-icon.png">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -290,6 +290,7 @@
   .flow figcaption { text-align: center; font-size: 13px; color: var(--muted); margin-top: 10px; }
   .flow figcaption b { display: block; font-family: var(--brand); font-size: 12px; color: var(--cyan); }
   .flow figure:not(:last-child)::after { content: "→"; position: absolute; right: -14px; top: 40%; transform: translateX(50%); font-family: var(--brand); color: var(--cyan); font-size: 18px; text-shadow: 0 0 10px var(--cyan); }
+  .rights { margin: 20px 0 0; padding: 12px 16px; border-radius: 14px; font-size: 14px; color: var(--text); background: rgba(94, 224, 255, .08); border: 1px solid rgba(94, 224, 255, .25); }
   .offline-visual { position: relative; display: grid; place-items: center; }
   .offline-visual img { width: min(300px, 80%); border-radius: 30px; border: 1px solid var(--line); box-shadow: 0 30px 60px rgba(0, 0, 0, .5), var(--glow); }
   .offline-visual .chip { position: absolute; padding: 10px 16px; border-radius: 14px; background: rgba(7, 10, 31, .88); border: 1px solid var(--line); font-size: 14px; font-weight: 500; backdrop-filter: blur(8px); white-space: nowrap; }
@@ -354,8 +355,8 @@
       <span>Share MusicBox</span>
     </a>
     <nav aria-label="主要選單">
-      <a href="#share">分享</a>
       <a href="#offline">離線聽</a>
+      <a href="#share">分享</a>
       <a href="#demo">操作示範</a>
       <a href="#import">放入音樂</a>
       <a href="#faq">常見問題</a>
@@ -369,9 +370,9 @@
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="eyebrow reveal"><i></i>一鍵分享 · 離線也能聽</span>
-        <h1 class="reveal"><span class="nb">整張專輯，</span><span class="nb"><em>一鍵分享</em>給家人</span><span class="nb">沒有網路，也照樣聽</span></h1>
-        <p class="lead reveal">把孩子上課的兒歌、自己收藏的 mp3 整理成專輯，存在手機裡。搭車、出國、山上沒訊號都能播；用 AirDrop 把整張專輯連同曲序和封面傳給家人，對方點開就能聽。</p>
+        <span class="eyebrow reveal"><i></i>離線播放 · 家人分享</span>
+        <h1 class="reveal"><span class="nb">你自己的音樂，</span><span class="nb"><em>沒有網路</em>也能聽</span><span class="nb">整張專輯，傳給家人</span></h1>
+        <p class="lead reveal">把你自己擁有的音樂——自行錄製的音檔、購買的 CD 轉檔——整理成專輯存在手機裡。搭車、出國、山上沒訊號都能播；整理好的專輯，也能用 AirDrop 傳到家人的 iPhone。</p>
         <div class="get reveal">
           <div class="qr" data-qr aria-label="App Store 下載 QR Code">QR Code<br>即將提供</div>
           <div>
@@ -398,29 +399,11 @@
   <section id="why">
     <div class="wrap">
       <span class="kicker">Why Share MusicBox</span>
-      <h2 class="reveal">兩件事，我們做得特別好</h2>
-      <p class="sub reveal">串流 App 很多，但「把自己的歌整理好、隨時能聽、還能整包傳給家人」的不多。</p>
+      <h2 class="reveal">為你自己的音樂收藏而設計</h2>
+      <p class="sub reveal">串流 App 聽的是別人的曲庫；Share MusicBox 管理的是你自己的音樂：整理好、隨時能聽，也能傳給家人。</p>
 
-      <article class="pillar reveal" id="share">
-        <div class="copy">
-          <span class="badge">🎁 一鍵分享</span>
-          <h3>整張專輯，<br>AirDrop 就傳過去</h3>
-          <p>不用一首一首傳，也不用教家人怎麼整理。長按專輯選「分享專輯」，對方收到後按一下「匯入」，就是一張排好的專輯。</p>
-          <ul class="checks">
-            <li><div><b>曲序、封面、歌詞一起帶過去</b><br><span>收到的專輯和你手機上的一模一樣。</span></div></li>
-            <li><div><b>重複的歌自動略過</b><br><span>家人已經有的歌不會變成兩份。</span></div></li>
-            <li><div><b>對方沒裝 App 也能分享</b><br><span>長按歌曲選「分享音樂檔」，直接傳一般的 mp3。</span></div></li>
-            <li><div><b>AirDrop 不需要網路</b><br><span>兩支手機靠近就能傳，在車上、在教室都行。</span></div></li>
-          </ul>
-        </div>
-        <div class="flow">
-          <figure><img src="assets/img/s05-share-menu.webp" alt="長按專輯後出現的選單，包含「分享專輯」" loading="lazy"><figcaption><b>STEP 1</b>長按專輯 → 分享專輯</figcaption></figure>
-          <figure><img src="assets/img/s06-share-sheet.webp" alt="系統分享選單，可選擇 AirDrop 或其他方式傳送" loading="lazy"><figcaption><b>STEP 2</b>選 AirDrop 傳給家人</figcaption></figure>
-          <figure><img src="assets/img/r01-incoming.webp" alt="收件人手機上的「收到分享」畫面，列出專輯名稱與四首歌" loading="lazy"><figcaption><b>STEP 3</b>家人按「匯入」</figcaption></figure>
-        </div>
-      </article>
 
-      <article class="pillar flip reveal" id="offline">
+      <article class="pillar reveal" id="offline">
         <div class="copy">
           <span class="badge">✈️ 離線也能聽</span>
           <h3>歌就存在手機裡，<br>沒有訊號也不怕</h3>
@@ -439,6 +422,25 @@
           <span class="chip c">🔁 單曲／整張循環</span>
         </div>
       </article>
+      <article class="pillar flip reveal" id="share">
+        <div class="copy">
+          <span class="badge">🎁 分享給家人</span>
+          <h3>整理好的專輯，<br>傳到家人的 iPhone</h3>
+          <p>不用一首一首傳，也不用教家人怎麼整理。長按專輯選「分享專輯」，確認是你有權分享的音樂後用 AirDrop 傳送；對方按一下「匯入」，就是一張排好的專輯。</p>
+          <ul class="checks">
+            <li><div><b>曲序、封面、歌詞一起帶過去</b><br><span>收到的專輯和你手機上的一模一樣。</span></div></li>
+            <li><div><b>重複的歌自動略過</b><br><span>家人已經有的歌不會變成兩份。</span></div></li>
+            <li><div><b>對方沒裝 App 也能分享</b><br><span>長按歌曲選「分享音樂檔」，直接傳一般的 mp3。</span></div></li>
+            <li><div><b>AirDrop 不需要網路</b><br><span>兩支手機靠近就能傳，在車上、在教室都行。</span></div></li>
+          </ul>
+          <p class="rights">🛡️ 分享前，App 會提醒你：只分享自己擁有或有權分享的音樂。</p>
+        </div>
+        <div class="flow">
+          <figure><img src="assets/img/s05-share-menu.webp" alt="長按專輯後出現的選單，包含「分享專輯」" loading="lazy"><figcaption><b>STEP 1</b>長按專輯 → 分享專輯</figcaption></figure>
+          <figure><img src="assets/img/s06-share-notice.webp" alt="分享前的確認畫面，提醒只分享自己擁有或有權分享的音樂" loading="lazy"><figcaption><b>STEP 2</b>確認後，選 AirDrop</figcaption></figure>
+          <figure><img src="assets/img/r01-incoming.webp" alt="收件人手機上的「收到分享」畫面，列出專輯名稱與四首歌" loading="lazy"><figcaption><b>STEP 3</b>家人按「匯入」</figcaption></figure>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -446,20 +448,20 @@
   <section id="demo">
     <div class="wrap">
       <span class="kicker">Demo</span>
-      <h2 class="reveal">看兩支手機怎麼傳</h2>
-      <p class="sub reveal">前半段是寄件人：把歌放進來、分享出去；後半段是收件人：收到專輯，沒有網路也能聽。點章節可以直接跳到那一段。</p>
+      <h2 class="reveal">一分鐘看懂怎麼用</h2>
+      <p class="sub reveal">前半段：把自己的音樂放進來、整理成專輯、傳給家人；後半段：家人收到專輯，沒有網路也能聽。點章節可以直接跳到那一段。</p>
       <div class="demo">
         <div class="phone reveal">
           <video id="demoVideo" src="assets/video/demo.mp4" poster="assets/video/demo-poster.jpg" controls muted playsinline preload="metadata" aria-label="App 完整操作示範影片"></video>
         </div>
         <ol class="chapters reveal" aria-label="影片章節">
-          <li><button data-t="0"><b>01</b><span>寄件人：Wi-Fi 傳歌<small>用電腦瀏覽器把歌傳進手機</small></span><time>0:00</time></button></li>
-          <li><button data-t="9.5"><b>02</b><span>一鍵匯入<small>一個資料夾就是一張專輯</small></span><time>0:10</time></button></li>
-          <li><button data-t="18.2"><b>03</b><span>長按專輯，分享<small>整張專輯打包成一個檔案</small></span><time>0:18</time></button></li>
-          <li><button data-t="22.5"><b>04</b><span>傳給家人<small>AirDrop、訊息或存到檔案</small></span><time>0:23</time></button></li>
-          <li><button data-t="25.8"><b>05</b><span>收件人：收到專輯<small>看得到專輯名稱和每一首歌</small></span><time>0:26</time></button></li>
-          <li><button data-t="29.5"><b>06</b><span>按一下匯入<small>首頁馬上多一張專輯</small></span><time>0:30</time></button></li>
-          <li><button data-t="35.5"><b>07</b><span>沒有網路也能播<small>狀態列沒訊號，照樣播放</small></span><time>0:36</time></button></li>
+          <li><button data-t="0"><b>01</b><span>寄件人：Wi-Fi 傳歌<small>把自己的音樂從電腦傳進手機</small></span><time>0:00</time></button></li>
+          <li><button data-t="7"><b>02</b><span>一鍵匯入<small>一個資料夾就是一張專輯</small></span><time>0:07</time></button></li>
+          <li><button data-t="16.8"><b>03</b><span>長按專輯，分享<small>整張專輯打包成一個檔案</small></span><time>0:17</time></button></li>
+          <li><button data-t="20.8"><b>04</b><span>確認後傳給家人<small>提醒只分享有權分享的音樂</small></span><time>0:21</time></button></li>
+          <li><button data-t="26.6"><b>05</b><span>收件人：收到專輯<small>看得到專輯名稱和每一首歌</small></span><time>0:27</time></button></li>
+          <li><button data-t="31"><b>06</b><span>按一下匯入<small>首頁馬上多一張專輯</small></span><time>0:31</time></button></li>
+          <li><button data-t="37.5"><b>07</b><span>沒有網路也能播<small>狀態列沒訊號，照樣播放</small></span><time>0:38</time></button></li>
         </ol>
       </div>
     </div>
@@ -582,7 +584,7 @@
       <div class="three">
         <div class="reveal"><h3>下載 App</h3><p>掃描 QR Code 或在 App Store 搜尋「Share MusicBox」。</p></div>
         <div class="reveal"><h3>放入音樂</h3><p>用上面任一種方式把 mp3 放進來，一個資料夾變成一張專輯。</p></div>
-        <div class="reveal"><h3>離線聽、分享給家人</h3><p>沒有網路照樣播；長按專輯就能用 AirDrop 傳給家人。</p></div>
+        <div class="reveal"><h3>離線聽、傳給家人</h3><p>沒有網路照樣播；整理好的專輯，也能用 AirDrop 傳給家人。</p></div>
       </div>
     </div>
   </section>
@@ -595,7 +597,8 @@
       <div class="gallery" tabindex="0" aria-label="App 畫面截圖，可左右捲動">
         <figure><img src="assets/img/s01-library.webp" alt="首頁：我的音樂專輯列表" loading="lazy"><figcaption>我的音樂</figcaption></figure>
         <figure><img src="assets/img/s05-share-menu.webp" alt="長按專輯的選單" loading="lazy"><figcaption>長按專輯就能分享</figcaption></figure>
-        <figure><img src="assets/img/s06-share-sheet.webp" alt="系統分享選單" loading="lazy"><figcaption>AirDrop、訊息、存到檔案</figcaption></figure>
+        <figure><img src="assets/img/s06-share-notice.webp" alt="分享前的確認畫面" loading="lazy"><figcaption>分享前的提醒</figcaption></figure>
+        <figure><img src="assets/img/s07-share-sheet.webp" alt="系統分享選單" loading="lazy"><figcaption>AirDrop、訊息、存到檔案</figcaption></figure>
         <figure><img src="assets/img/r01-incoming.webp" alt="收到分享的畫面" loading="lazy"><figcaption>家人收到的畫面</figcaption></figure>
         <figure><img src="assets/img/r03-library.webp" alt="匯入後首頁多了「週末唱遊」專輯" loading="lazy"><figcaption>匯入後馬上出現</figcaption></figure>
         <figure><img src="assets/img/r05-offline-playing.webp" alt="沒有網路時的播放畫面" loading="lazy"><figcaption>沒有網路照樣播</figcaption></figure>
@@ -612,13 +615,13 @@
       <h2 class="reveal">常見問題</h2>
       <div class="faq">
         <details><summary>沒有網路真的能聽嗎？</summary><p>可以。音樂檔案存在你的手機裡，播放時完全不需要連線；開飛航模式也能聽。只有「Wi-Fi 傳歌」需要電腦和手機在同一個 Wi-Fi 下。</p></details>
+        <details><summary>可以放哪些音樂、分享給誰？</summary><p>Share MusicBox 是管理「你自己的音樂」的播放器，App 本身不提供任何音樂。請只放入你擁有或有權使用的音樂，例如自行錄製的音檔或自己購買的 CD 轉檔；分享給家人前，也請確認符合該音樂的授權範圍，App 在分享前也會提醒你。</p></details>
         <details><summary>分享專輯需要網路嗎？</summary><p>用 AirDrop 不需要網路，兩支手機靠近就能傳。也可以用訊息、LINE 或「儲存到檔案」傳送分享檔。</p></details>
         <details><summary>家人會收到什麼？</summary><p>一個「專輯名稱.musicbox」檔案，裡面有整張專輯的歌曲、曲序、封面和歌詞。對方用 Share MusicBox 打開、按「匯入」就完成；如果已經有同名專輯，會加在裡面並略過重複的歌。</p></details>
         <details><summary>對方沒有安裝 App，可以分享給他嗎？</summary><p>可以。長按歌曲選「分享音樂檔」，對方會收到一般的 mp3，用任何播放器都能聽。</p></details>
         <details><summary>支援哪些音樂格式？</summary><p>mp3、m4a、aac、wav、aiff、flac、caf。也支援 .lrc／.txt 歌詞檔，放在同一個資料夾、檔名相同就會自動配對。</p></details>
         <details><summary>Wi-Fi 傳歌安全嗎？</summary><p>只有在手機上打開「Wi-Fi 傳歌」畫面時才會接收檔案，關掉就停止。網址裡有一組每次都不同的存取碼，同一個 Wi-Fi 的其他人沒有存取碼就無法上傳；而且只接受音樂與歌詞檔。</p></details>
         <details><summary>我的音樂會上傳到雲端嗎？</summary><p>不會。所有音樂只存在你的手機裡，App 不需要註冊帳號，也不會蒐集任何個人資料。</p></details>
-        <details><summary>可以放哪些音樂、分享給誰？</summary><p>請放入你擁有或有權使用的音樂，例如自己購買的 CD 轉檔或自行錄製的音檔。分享給他人前，也請確認符合音樂的授權範圍。</p></details>
       </div>
     </div>
   </section>
@@ -628,7 +631,7 @@
     <div class="wrap">
       <div class="download reveal">
         <img class="icon" src="assets/img/app-icon.webp" alt="Share MusicBox App 圖示" width="96" height="96" loading="lazy">
-        <h2>把歌收好，隨時聽、隨時分享</h2>
+        <h2>把你的音樂收好，隨時都能聽</h2>
         <p class="sub" style="margin-inline:auto">支援 iPhone 與 iPad（iOS 17 以上）。</p>
         <div class="get">
           <div class="qr" data-qr aria-label="App Store 下載 QR Code">QR Code<br>即將提供</div>
@@ -644,7 +647,7 @@
 </main>
 
 <footer>
-  <div class="wrap">© <span id="year"></span> Share MusicBox · 一鍵分享、離線也能聽的家庭音樂盒</div>
+  <div class="wrap">© <span id="year"></span> Share MusicBox · 你自己的音樂，離線也能聽</div>
 </footer>
 
 <script>
