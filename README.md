@@ -2,7 +2,7 @@
 
 Share MusicBox（iPhone / iPad 家庭音樂盒）的產品介紹網站，包含操作示範影片、功能說明與下載 QR Code。
 
-網站網址：https://squall.github.io/share-musicbox/
+網站網址：https://musicbox.seerinn.com/
 
 ## 上架後設定 App Store 連結
 
