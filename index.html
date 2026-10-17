@@ -734,7 +734,7 @@
   // 聯絡 email 不直接寫在網頁原始碼中，避免被收集廣告信的程式抓取；點擊後才組合顯示
   document.querySelectorAll("[data-contact]").forEach(btn => {
     btn.addEventListener("click", () => {
-      const parts = ["service", "seerinn.com"];
+      const parts = ["seerinn2013", "gmail.com"];
       const address = parts.join("@");
       const link = document.createElement("a");
       link.href = "mailto:" + address;
