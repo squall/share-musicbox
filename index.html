@@ -308,6 +308,8 @@
     .offline-visual .chip { font-size: 12px; padding: 8px 12px; }
   }
 
+  .contact-btn { font: inherit; color: var(--cyan); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
+
   /* 進場動畫 */
   .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1); }
   .reveal.in { opacity: 1; transform: none; }
@@ -647,7 +649,7 @@
 </main>
 
 <footer>
-  <div class="wrap">© <span id="year"></span> Share MusicBox · 你自己的音樂，離線也能聽 · <a href="privacy.html">隱私權政策</a> · 聯絡我們：<a href="mailto:service@seerinn.com">service@seerinn.com</a><br>© 2026 SEER INNOVATION TECHNOLOGY CO., LTD.</div>
+  <div class="wrap">© <span id="year"></span> Share MusicBox · 你自己的音樂，離線也能聽 · <a href="privacy.html">隱私權政策</a> · <button type="button" class="contact-btn" data-contact>顯示聯絡 email</button><br>© 2026 SEER INNOVATION TECHNOLOGY CO., LTD.</div>
 </footer>
 
 <script>
@@ -727,6 +729,20 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
   }, { threshold: 0.12 }) : null;
   document.querySelectorAll(".reveal").forEach(el => io ? io.observe(el) : el.classList.add("in"));
+</script>
+<script>
+  // 聯絡 email 不直接寫在網頁原始碼中，避免被收集廣告信的程式抓取；點擊後才組合顯示
+  document.querySelectorAll("[data-contact]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const parts = ["service", "seerinn.com"];
+      const address = parts.join("@");
+      const link = document.createElement("a");
+      link.href = "mailto:" + address;
+      link.textContent = address;
+      btn.replaceWith(link);
+      link.focus();
+    });
+  });
 </script>
 </body>
 </html>

@@ -25,6 +25,7 @@
   ul { padding-left: 20px; }
   .en { margin-top: 40px; }
   .en h2 { font-size: 17px; }
+  .contact-btn { font: inherit; color: var(--cyan); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -67,7 +68,7 @@
 
   <section>
     <h2>聯絡我們</h2>
-    <p>對本政策或 App 有任何問題，請來信：<a href="mailto:service@seerinn.com">service@seerinn.com</a><br>SEER INNOVATION TECHNOLOGY CO., LTD.</p>
+    <p>對本政策或 App 有任何問題，歡迎來信：<button type="button" class="contact-btn" data-contact>顯示聯絡 email</button><br>SEER INNOVATION TECHNOLOGY CO., LTD.</p>
   </section>
 
   <section>
@@ -78,9 +79,23 @@
   <div class="en">
     <section>
       <h2>Privacy Policy (English summary)</h2>
-      <p>Share MusicBox does not collect, store, or transmit any personal data. There are no accounts, ads, analytics, or third-party SDKs. Music, lyrics, album names, and artwork you import are stored only on your device. Sharing happens only when you choose to share, through the iOS share sheet (e.g. AirDrop) to recipients you pick. Wi-Fi Transfer runs only while its screen is open, stays within your local network, and never connects to the internet. Contact: <a href="mailto:service@seerinn.com">service@seerinn.com</a> (SEER INNOVATION TECHNOLOGY CO., LTD.)</p>
+      <p>Share MusicBox does not collect, store, or transmit any personal data. There are no accounts, ads, analytics, or third-party SDKs. Music, lyrics, album names, and artwork you import are stored only on your device. Sharing happens only when you choose to share, through the iOS share sheet (e.g. AirDrop) to recipients you pick. Wi-Fi Transfer runs only while its screen is open, stays within your local network, and never connects to the internet. Contact: <button type="button" class="contact-btn" data-contact>show email</button> (SEER INNOVATION TECHNOLOGY CO., LTD.)</p>
     </section>
   </div>
 </main>
+<script>
+  // 聯絡 email 不直接寫在網頁原始碼中，避免被收集廣告信的程式抓取；點擊後才組合顯示
+  document.querySelectorAll("[data-contact]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const parts = ["service", "seerinn.com"];
+      const address = parts.join("@");
+      const link = document.createElement("a");
+      link.href = "mailto:" + address;
+      link.textContent = address;
+      btn.replaceWith(link);
+      link.focus();
+    });
+  });
+</script>
 </body>
 </html>
